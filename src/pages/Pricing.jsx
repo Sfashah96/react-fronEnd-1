@@ -1,100 +1,190 @@
-import React from 'react';
-import PricingCard from '../Components/PricingCards/PricingCard';
-import Services from '../Components/ServicesSection/Services';
-import ContactSection from '../Components/ContactSection/ContactSection';
-import Founder from '../Components/FounderInfo/FounderInfo';
-import PricingHero from '../Components/HeroSection/PricingHero';
-import PriceInfo from '../Components/PriceInfo/PriceInfo';
+import React, {useState} from 'react';
+import {Code, Globe, Zap, Database, Smartphone, CloudLightning, ArrowRight} from 'lucide-react';
 
-
-const projects = [
-  {
-    name: "Community Management Platform",
-    duration: "3 months",
-    cost: "€40k",
-    description: "An MVP for a Q&A platform for the beauty industry.",
-  },
-  {
-    name: "Arts Marketplace",
-    duration: "2 months",
-    cost: "€18k",
-    description: "Marketplace built to serve the specific needs of an Art’s niche.",
-  },
-  {
-    name: "API Middleware Connector",
-    duration: "5 months",
-    cost: "€90k",
-    description: "Software to seamlessly integrate several different third parties in a drag and drop interface.",
-  },
-  {
-    name: "Proptech Cloud",
-    duration: "5 months",
-    cost: "€350k",
-    description: "AI tool that analyses several data-points related to a certain geographic area and outputs the forward-looking value of real estate assets (by category – residential/commercial – type – compound/villa/flat – and size – 1/2/n bedrooms) in that area.",
-  },
-  {
-    name: "Legaltech",
-    duration: "2 months",
-    cost: "€100k",
-    description: "An MVP for a complex AI tool that analyses public rules on securities and advises front-office bankers on their sales choices towards the different client’s profiles.",
-  },
-  {
-    name: "Social Network Mobile App",
-    duration: "5 months",
-    cost: "€50k",
-    description: "A gamified fandom centric community where humans can engage in a closer and richer way.",
-  },
-  {
-    name: "Massive Data Ingestion System",
-    duration: "3 months",
-    cost: "€160k",
-    description: "A robust system constantly ingesting ~5TB of new data per day, keeping consistency and allowing immediate queries to all the data set.",
-  },
-  {
-    name: "MAdTech Platform",
-    duration: "2 months",
-    cost: "€18k",
-    description: "SaaS for FMCGs to create & manage integrated complex online and offline promotion campaigns, reaching each customer in an (almost) personalised way.",
-  },
-  {
-    name: "API Middleware Connector",
-    duration: "5 months",
-    cost: "€60k",
-    description: "Software to seamlessly integrate several different third parties in a drag and drop interface.",
-  },
-];
+const projectCategories = {
+  webDevelopment: [
+    {
+      name: 'E-Commerce Platform for Local Artisans',
+      duration: '4 months',
+      cost: 'PKR 2.5M',
+      description: 'Digital marketplace connecting Pakistani handicraft sellers with national and international buyers.',
+      technologies: ['React', 'Node.js', 'MongoDB'],
+      complexity: 'High'
+    },
+    {
+      name: 'Corporate Website Redesign',
+      duration: '2 months',
+      cost: 'PKR 1.2M',
+      description: 'Modern, responsive website with advanced SEO and performance optimization.',
+      technologies: ['Next.js', 'Tailwind', 'Prisma'],
+      complexity: 'Medium'
+    }
+  ],
+  mobileApps: [
+    {
+      name: 'AgriTech Mobile Solution',
+      duration: '3 months',
+      cost: 'PKR 1.8M',
+      description: 'Mobile app providing farmers with crop pricing, weather forecasts, and market linkages.',
+      technologies: ['Flutter', 'Firebase', 'GraphQL'],
+      complexity: 'High'
+    },
+    {
+      name: 'Telemedicine Platform',
+      duration: '3 months',
+      cost: 'PKR 2.7M',
+      description: 'Multilingual telemedicine solution connecting patients with doctors across Pakistan.',
+      technologies: ['React Native', 'WebRTC', 'Stripe'],
+      complexity: 'Very High'
+    }
+  ],
+  aiSolutions: [
+    {
+      name: 'Islamic FinTech AI Platform',
+      duration: '5 months',
+      cost: 'PKR 4.5M',
+      description: 'Shariah-compliant AI-powered digital banking with advanced financial insights.',
+      technologies: ['Python', 'TensorFlow', 'Kubernetes'],
+      complexity: 'Very High'
+    },
+    {
+      name: 'Predictive Analytics Engine',
+      duration: '4 months',
+      cost: 'PKR 3.8M',
+      description: 'Machine learning system for business forecasting and strategic decision-making.',
+      technologies: ['PyTorch', 'Pandas', 'Docker'],
+      complexity: 'High'
+    }
+  ],
+  cloudServices: [
+    {
+      name: 'Enterprise Cloud Migration',
+      duration: '4 months',
+      cost: 'PKR 3.5M',
+      description: 'Comprehensive cloud transformation strategy and implementation.',
+      technologies: ['AWS', 'Terraform', 'Kubernetes'],
+      complexity: 'Very High'
+    },
+    {
+      name: 'Hybrid Cloud Infrastructure',
+      duration: '5 months',
+      cost: 'PKR 4.2M',
+      description: 'Custom cloud solution balancing security, performance, and cost-effectiveness.',
+      technologies: ['Azure', 'GCP', 'Ansible'],
+      complexity: 'High'
+    }
+  ]
+};
 
 const Pricing = () => {
-  return (
-    <section className="pricingPage overflow-x-hidden">
-      <PricingHero />
-      <Founder
-        founderImage="https://altar.io/wp-content/uploads/2023/09/pricing1.png.webp"
-        title="Recent Examples"
-        description="Here are some examples of projects we worked on over the last few months. This will help you understand how pricing can vary depending on factors like size and complexity."
-      />
+  const [activeCategory, setActiveCategory] = useState('webDevelopment');
 
-      {/* Responsive Cards Grid with Dynamic Margins */}
-      <div className="px-5 py-10 grid gap-6 
-        sm:grid-cols-1 sm:mx-2 
-        md:grid-cols-2 md:mx-0 
-        lg:grid-cols-3 lg:mx-20 xl:mx-56">
-        {projects.map((project, index) => (
-          <PricingCard
-            key={index}
-            name={project.name}
-            cost={project.cost}
-            duration={project.duration}
-            description={project.description}
-          />
-        ))}
+  const categories = [
+    {
+      key: 'webDevelopment',
+      label: 'Web Development',
+      icon: <Globe className="mr-2" />
+    },
+    {
+      key: 'mobileApps',
+      label: 'Mobile Apps',
+      icon: <Smartphone className="mr-2" />
+    },
+    {
+      key: 'aiSolutions',
+      label: 'AI Solutions',
+      icon: <Code className="mr-2" />
+    },
+    {
+      key: 'cloudServices',
+      label: 'Cloud Services',
+      icon: <CloudLightning className="mr-2" />
+    }
+  ];
+
+  const ComplexityBadge = ({level}) => {
+    const complexityColors = {
+      Low: 'bg-green-100 text-green-800',
+      Medium: 'bg-yellow-100 text-yellow-800',
+      High: 'bg-orange-100 text-orange-800',
+      'Very High': 'bg-red-100 text-red-800'
+    };
+
+    return (
+      <span
+        className={`
+        px-2 py-1 rounded-full text-xs font-semibold
+        ${complexityColors[level] || 'bg-gray-100 text-gray-800'}
+      `}
+      >
+        {level} Complexity
+      </span>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 px-4 text-center">
+        <h1 className="text-4xl font-bold mb-4 text-white">Digital Solutions for Pakistani Enterprises</h1>
+        <p className="text-xl max-w-2xl mx-auto text-white/90">Cutting-edge technology solutions tailored to transform your business</p>
       </div>
 
-      <PriceInfo />
-      <Services />
-      <div className="py-20"></div>
-      <ContactSection />
-    </section>
+      {/* Category Tabs */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-center mb-8 space-x-2">
+          {categories.map(category => (
+            <button
+              key={category.key}
+              onClick={() => setActiveCategory(category.key)}
+              className={`
+                flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                ${activeCategory === category.key ? 'bg-indigo-500 text-white shadow-lg' : 'bg-white text-gray-700 hover:bg-indigo-50 border border-gray-200'}
+              `}
+            >
+              {category.icon}
+              {category.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {projectCategories[activeCategory].map((project, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-indigo-800">{project.name}</h3>
+                  <ComplexityBadge level={project.complexity} />
+                </div>
+
+                <p className="text-gray-600 mb-4">{project.description}</p>
+
+                <div className="mb-4">
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>Duration: {project.duration}</span>
+                    <span>Cost: {project.cost}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-indigo-50 text-indigo-600 px-2 py-1 rounded-full text-xs">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <button className="w-full flex items-center justify-center bg-indigo-500 text-white py-3 rounded-md hover:bg-indigo-600 transition-colors">
+                  Explore Project <ArrowRight className="ml-2" size={18} />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
+
 export default Pricing;

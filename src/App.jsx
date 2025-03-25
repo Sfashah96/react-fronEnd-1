@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -8,20 +8,20 @@ import Pricing from './pages/Pricing';
 import BlogPage from './Components/BlogPage/src/BlogPage';
 import CareersPage from './Components/CareerPage/Career';
 import TechPage from './Components/TechPage/TechPage';
-import DashBoard from './Components/DashBorad/DashBoard'
+import DashBoard from './Components/DashBorad/DashBoard';
 function App() {
   return (
     <Router basename="/">
       <Layout>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/services" element={<Services />} />
+          {/* <Route path="/services" element={<Services />} /> */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
-          <Route path="/career" element={<CareersPage/>} />
-          <Route path="/tech" element={<TechPage/>} />
-          <Route path="/blog/*" element={<BlogPage />} /> {/* Use `/*` for nested routes */}
-          <Route path="/dashboard" element={<DashBoard/>} />
+          <Route path="/career" element={<CareersPage />} />
+          <Route path="/tech" element={<TechPage />} />
+          {/* <Route path="/blog/*" element={<BlogPage />} /> Use `/*` for nested routes */}
+          <Route path="/dashboard" element={<DashBoard />} />
         </Routes>
       </Layout>
     </Router>

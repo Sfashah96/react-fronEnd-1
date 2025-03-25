@@ -6,39 +6,35 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background-color: rgb(242, 242, 242);
   /* margin: 0 200px; */
 }
 
-.FeatureSection{
+.FeatureSection {
   background-color: rgb(16, 16, 43);
 }
 
-
-.sbmenuItem:hover .subMenuText{
+.sbmenuItem:hover .subMenuText {
   color: white !important;
 }
 
-
-.PrimaryButton{
+.PrimaryButton {
   width: auto;
   color: antiquewhite;
   font-weight: bolder;
   border-radius: 40px;
-  transition: all .1s ease-in;
-  padding: 10px 10PX;
+  transition: all 0.1s ease-in;
+  padding: 10px 10px;
   min-width: 150px;
-  
 }
 
-.PrimaryButton:hover{
+.PrimaryButton:hover {
   background-color: #e7107e;
 }
 
-
 @media only screen and (min-width: 768px) {
-  .services{
+  .services {
     display: flex;
     justify-content: space-around;
     gap: 20px;
@@ -46,17 +42,17 @@ body{
     flex-direction: column;
   }
 
-  .card{
+  .card {
     width: 32%;
   }
-  .awardsImgSection{
+  .awardsImgSection {
     display: flex;
     justify-content: start;
     align-items: center;
     margin-left: 10%;
     width: 80%;
   }
-  .awardsContainer{
+  .awardsContainer {
     display: flex;
     justify-content: center;
     width: 250px;
@@ -64,189 +60,162 @@ body{
   }
 }
 
-
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Tablet-specific styles */
-  .awardsImgSection{
+  .awardsImgSection {
     display: flex;
     justify-content: center;
   }
-  .clientLogo{
+  .clientLogo {
     width: 300px;
   }
-  .awardsContainer{
+  .awardsContainer {
     width: 200px;
   }
 
-  .awardsContainer > :nth-child(1){
-    
+  .awardsContainer > :nth-child(1) {
     width: 150px;
     height: 150px;
-
   }
-  .serviceCards{
+  .serviceCards {
     width: 49%;
   }
-  .FeatureSection{
+  .FeatureSection {
     padding: 0 30px;
   }
 
-  .Features{
+  .Features {
     margin-bottom: 100px;
   }
- 
 }
-
-
 
 /* @media only screen and (max-width: 600px) { */
 
-  section.PrimaryHeader{
-    display: flex;
-    position: sticky;
-    top: 0;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 80px;
-    background-color: rgb(236, 236, 236);
-    font-size: 15px;
+section.PrimaryHeader {
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(236, 236, 236);
+  font-size: 15px;
+}
 
-  }
+.toggleButton {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 50px;
+  width: 50px;
+}
 
-  .toggleButton{
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 20px;
-    height: 50px;
-    width: 50px;
-  }
+.toggleButton > div {
+  height: 5px;
+  width: 30px;
+  background-color: red;
+  margin-top: 5px;
+}
 
-  .toggleButton > div{
-    height: 5px;
-    width: 30px;
-    background-color: red;
-    margin-top: 5px;
-  }
+.logo {
+  width: 180px;
+  height: 180px;
+}
 
-  .logo{
-    width: 100px;
-    height: 100px;
-  }
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(16, 13, 43);
+  margin: 0 200px;
+}
 
-  .heroSection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(16, 13, 43);
-    margin: 0 200px;
+.heroSection > * {
+  color: white;
+  font-family: sans-serif;
+}
 
-  }
+.heroSection > h3 {
+  font-size: 20px;
+  color: rgb(179, 179, 179);
+}
 
-  .heroSection > *{
-    color: white;
-    font-family:  sans-serif;
-  }
+.heroSection > h1 {
+  font-size: 53px;
+  font-weight: bolder;
+}
 
-  .heroSection > h3{
-    font-size: 20px;
-    color: rgb(179, 179, 179);
-  }
-
-  .heroSection > h1{
-    font-size: 53px;
-    font-weight:bolder;
-  }
-
-
-.services{
-  padding: 0 10px; 
+.services {
+  padding: 0 10px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
   flex-wrap: wrap;
   flex-direction: column;
-
 }
 
-.cards{
+.cards {
   gap: 10px;
 }
 
-  .founder{
-    width: 100%;
-    height: fit-content;
-  }
+.founder {
+  width: 100%;
+  height: fit-content;
+}
 
+.Features {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  width: 100%;
+  height: 60vh;
+  padding: 20px 0;
+}
 
-  .Features{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items: start;
-    width: 100%;
-    height: 60vh;
-    padding: 20px 0;
-  }
+.Awards {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
-  .Awards{
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
- 
+.Awards > div > img {
+  width: 150px;
+  height: 150px;
+}
+.FeatureImage {
+  padding: 5px 10px;
+  border-radius: 20px;
+}
 
-  .Awards > div> img{
-    
-    width: 150px;
-    height: 150px;
-  }
-  .FeatureImage{
-    padding:  5px 10px;
-    border-radius: 20px;
-  }
-
-
-  .teamText{
-    padding: 10px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 25vh;
-    background-color: white;
-  }
-  .emailButtom{
-    display: flex;
-    justify-content: center;
-  }
-
+.teamText {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 25vh;
+  background-color: white;
+}
+.emailButtom {
+  display: flex;
+  justify-content: center;
+}
 
 /* service page */
 
-.clientLogo{
+.clientLogo {
   width: 120px;
   height: auto;
 }
 
-
-
-
-
-
-
-
-/* ///////////////////////////////////// tech animation////////////////////////// */ 
-
-
-
-
+/* ///////////////////////////////////// tech animation////////////////////////// */
