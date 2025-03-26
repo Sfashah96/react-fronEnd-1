@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white lg:px-32">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center">
                 <MapPinIcon className="w-5 h-5 mr-3 text-pink-400" />
-                <p>Khurshaid Khan Plaza, Near Azmat Gym, Charbagh Swat</p>
+                <p>Khurshaid Khan Plaza, Charbagh Swat</p>
               </div>
               <div className="flex items-center">
                 <EnvelopeIcon className="w-5 h-5 mr-3 text-pink-400" />
@@ -50,8 +50,7 @@ export default function Footer() {
                 {name: 'Home', href: '/'},
                 {name: 'Services', href: '/services'},
                 {name: 'Projects', href: '/projects'},
-                {name: 'About Us', href: '/about'},
-                {name: 'Contact', href: '/contact'}
+                {name: 'About Us', href: '/about'}
               ].map(link => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-pink-300 transition-colors">

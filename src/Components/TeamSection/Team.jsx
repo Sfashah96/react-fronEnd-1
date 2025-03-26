@@ -24,7 +24,7 @@ const teamData = [
 export default function TeamSection() {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 lg:px-20">
+      <div className="container mx-auto px-4 lg:px-32">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Meet Our Experts</h2>
           <p className="text-gray-600 leading-relaxed">Our team is ready to help you with all your technical needs.</p>

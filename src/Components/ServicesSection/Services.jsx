@@ -42,7 +42,7 @@ const servicesData = [
 
 export default function Services(props) {
   return (
-    <section className="services md:mx-0 lg:mx-48">
+    <section className="services md:mx-0 lg:mx-32">
       <div className="serviceInfo lg:w-2/4">
         <h1 className="text-4xl font-bold py-6 lg:ml-[3%]">What We Do</h1>
         <p className="text-gray-700 text-xl leading-tight lg:ml-[3%]">We help entrepreneurs and business leaders build and launch innovative custom software solutions across industries. Whether you need a Minimum Viable Product, UX/UI services, full product development, or scaling support - we turn your vision into successful products.</p>

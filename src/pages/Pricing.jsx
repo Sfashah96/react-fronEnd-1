@@ -123,7 +123,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4 text-white">Digital Solutions for Pakistani Enterprises</h1>

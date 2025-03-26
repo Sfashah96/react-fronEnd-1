@@ -34,7 +34,7 @@ const newsItems = [
 
 function Home() {
   return (
-    <section className="pageBody">
+    <section className="">
       <HeroSection name="We Are TechNext" mainText="Precision-Crafted Product & Software Development for Your Success" />
 
       <Services />

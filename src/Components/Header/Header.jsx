@@ -63,7 +63,7 @@ export default function Header(props) {
   ];
 
   return (
-    <section className="PrimaryHeader sticky top-0 lg:h-20 z-50 px-3 flex items-center justify-between lg:px-60 bg-white shadow-md">
+    <section className="PrimaryHeader sticky top-0 lg:h-20 z-50 px-3 flex items-center justify-between lg:px-32 bg-white shadow-md">
       <img src={props.imgURL} alt="Logo" className="logo cursor-pointer" onClick={() => navigate('/')} />
 
       <div className="flex items-center justify-between flex-row gap-5">
