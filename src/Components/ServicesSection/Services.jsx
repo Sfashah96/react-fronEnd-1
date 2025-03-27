@@ -42,13 +42,13 @@ const servicesData = [
 
 export default function Services(props) {
   return (
-    <section className="services md:mx-0 lg:mx-32">
-      <div className="serviceInfo lg:w-2/4">
-        <h1 className="text-4xl font-bold py-6 lg:ml-[3%]">What We Do</h1>
-        <p className="text-gray-700 text-xl leading-tight lg:ml-[3%]">We help entrepreneurs and business leaders build and launch innovative custom software solutions across industries. Whether you need a Minimum Viable Product, UX/UI services, full product development, or scaling support - we turn your vision into successful products.</p>
+    <section className=" services md:mx-4 lg:mx-36">
+      <div className="serviceInfo lg:w-2/4 md:w-full">
+        <h1 className="text-4xl font-bold py-6 lg:ml-[3%] md:ml-0 md:text-7xl lg:text-4xl md:font-bold md:pt-20">What We Do</h1>
+        <p className="text-gray-700 text-xl leading-tight lg:ml-[3%] md:ml-0 md:text-3xl lg:text-xl md:font-semibold">We help entrepreneurs and business leaders build and launch innovative custom software solutions across industries. Whether you need a Minimum Viable Product, UX/UI services, full product development, or scaling support - we turn your vision into successful products.</p>
       </div>
 
-      <div className="cards flex flex-wrap lg:justify-center lg:gap-4 items-center mt-10">
+      <div className="cards flex flex-wrap lg:justify-center items-center mt-10">
         {servicesData.map((service, index) => (
           <Card key={index} imgURL={service.img} name={service.title} description={service.description} />
         ))}

@@ -9,16 +9,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white lg:px-32">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white lg:px-36 md:px-4">
+      <div className="px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center">
-              <MapPinIcon className="w-6 h-6 mr-3 text-pink-500" />
-              Contact Us
-            </h3>
-            <div className="space-y-4 text-gray-300">
+            <h3 className="text-2xl lg:text-2xl md:text-4xl font-bold mb-6 flex items-center">Contact Us</h3>
+            <div className="space-y-4 text-gray-300 lg:text-xl md:text-3xl">
               <div className="flex items-center">
                 <MapPinIcon className="w-5 h-5 mr-3 text-pink-400" />
                 <p>Khurshaid Khan Plaza, Charbagh Swat</p>
@@ -44,8 +41,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-3 text-gray-300">
+            <h3 className="text-2xl lg:text-2xl md:text-4xl font-bold mb-6">Quick Links</h3>
+            <ul className="space-y-3 lg:text-xl md:text-3xl text-gray-300">
               {[
                 {name: 'Home', href: '/'},
                 {name: 'Services', href: '/services'},
@@ -63,8 +60,8 @@ export default function Footer() {
 
           {/* Newsletter Subscription */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Stay Updated</h3>
-            <form className="space-y-4">
+            <h3 className="text-2xl lg:text-2xl md:text-4xl font-bold mb-6">Stay Updated</h3>
+            <form className="space-y-4 md:text-3xl md:space-y-6 lg:space-y-4 lg:text-xl">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -72,14 +69,14 @@ export default function Footer() {
                 aria-label="Email for newsletter subscription"
                 className="w-full bg-gray-800 text-white px-4 py-2 rounded-lg 
                   focus:outline-none focus:ring-2 focus:ring-pink-500 
-                  transition-all duration-300"
+                  transition-all duration-300 md:py-4 lg:py-2 "
               />
               <button
                 type="submit"
                 className="w-full bg-pink-600 hover:bg-pink-700 
                   text-white px-6 py-2 rounded-lg 
                   transition-colors duration-300 
-                  flex items-center justify-center"
+                  flex items-center justify-center md:py-4 lg:py-2"
               >
                 Subscribe
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">

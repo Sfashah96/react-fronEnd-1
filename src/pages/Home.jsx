@@ -41,6 +41,7 @@ function Home() {
       {/* <Founder title="TechNext" description="We are very happy to work with Altar.io. The collaboration goes far beyond a standard IT service: with Altar.io we have a sparring partner that challenges us in our product decisions and is truly passionate about the results developed. The level of professionalism and dedication is exceptional in this industry and we are eager to strengthen our collaboration in the future." founder="Philip Schoch – Apiax, Co-Founder" founderImage={founderImage} /> */}
       {/* <Feature/> */}
       <Team />
+
       {/* <Awards /> */}
       {/* <Clients /> */}
       {/* <CarouselV2 />

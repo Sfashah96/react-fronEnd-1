@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {href, useLocation, useNavigate} from 'react-router-dom'; // Added for navigation
+import {useLocation, useNavigate} from 'react-router-dom'; // Added for navigation
 import BasicButton from '../SiteAssets/Buttons/BasicButton';
 import ServicesSubmenu from './SubMenu';
 
@@ -63,9 +63,8 @@ export default function Header(props) {
   ];
 
   return (
-    <section className="PrimaryHeader sticky top-0 lg:h-20 z-50 px-3 flex items-center justify-between lg:px-32 bg-white shadow-md">
-      <img src={props.imgURL} alt="Logo" className="logo cursor-pointer" onClick={() => navigate('/')} />
-
+    <section className="PrimaryHeader pr-4 sticky top-0 lg:h-20 z-50 flex items-center justify-between lg:px-36 bg-white shadow-md">
+      <img src={props.imgURL} alt="Logo" className="py-7 w-20 logo lg:w-32 lg:h-64 md:w-64 md:h-96 " />
       <div className="flex items-center justify-between flex-row gap-5">
         <div className="menu lg:flex hidden lg:py-5 lg:font-semibold justify-between lg:items-end lg:w-3/1 relative">
           {menuLinks.map(link => (
@@ -80,7 +79,7 @@ export default function Header(props) {
         <div className="flex items-center gap-5">
           <BasicButton ButtonText="Book a Call" filled={true} handleClick={() => {}} />
 
-          <button onClick={handleAuthAction} className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 relative">
+          {/* <button onClick={handleAuthAction} className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 relative">
             {user ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -90,13 +89,13 @@ export default function Header(props) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             )}
-          </button>
+          </button> */}
 
           {/* Mobile Menu Toggle */}
-          <div className="flex flex-col justify-between w-6 h-5 cursor-pointer lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <div className={`h-1 bg-pink-600 rounded transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <div className={`h-1 bg-pink-600 w-4 rounded transition-all ${isMenuOpen ? 'opacity-0' : ''}`} />
-            <div className={`h-1 bg-pink-600 rounded transition-all ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <div className="flex flex-col justify-between w-6 h-5 md:w-20 md:h-12 cursor-pointer lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <div className={`h-1 bg-pink-600  md:h-3 rounded transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <div className={`h-1 bg-pink-600 w-4 md:w-16 md:h-3 rounded transition-all ${isMenuOpen ? 'opacity-0' : ''}`} />
+            <div className={`h-1 bg-pink-600 md:h-3 rounded transition-all ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </div>
         </div>
       </div>
@@ -105,7 +104,7 @@ export default function Header(props) {
       {isSignupOpen && <SignupLoginCard onClose={() => setIsSignupOpen(false)} />}
 
       {/* Logout Modal */}
-      {isLoggedOutModalOpen && (
+      {/* {isLoggedOutModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
             <h2 className="text-lg font-semibold text-gray-900">Messege</h2>
@@ -115,7 +114,7 @@ export default function Header(props) {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

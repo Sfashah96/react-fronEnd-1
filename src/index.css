@@ -2,105 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global HTML and Body Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: rgb(242, 242, 242);
-  /* margin: 0 200px; */
+  margin: 0;
 }
 
-.FeatureSection {
-  background-color: rgb(16, 16, 43);
-}
-
-.sbmenuItem:hover .subMenuText {
-  color: white !important;
-}
-
-.PrimaryButton {
-  width: auto;
-  color: antiquewhite;
-  font-weight: bolder;
-  border-radius: 40px;
-  transition: all 0.1s ease-in;
-  padding: 10px 10px;
-  min-width: 150px;
-}
-
-.PrimaryButton:hover {
-  background-color: #e7107e;
-}
-
-@media only screen and (min-width: 768px) {
-  .services {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin: 0 12%;
-    flex-direction: column;
-  }
-
-  .card {
-    width: 32%;
-  }
-  .awardsImgSection {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-left: 10%;
-    width: 80%;
-  }
-  .awardsContainer {
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Tablet-specific styles */
-  .awardsImgSection {
-    display: flex;
-    justify-content: center;
-  }
-  .clientLogo {
-    width: 300px;
-  }
-  .awardsContainer {
-    width: 200px;
-  }
-
-  .awardsContainer > :nth-child(1) {
-    width: 150px;
-    height: 150px;
-  }
-  .serviceCards {
-    width: 49%;
-  }
-  .FeatureSection {
-    padding: 0 30px;
-  }
-
-  .Features {
-    margin-bottom: 100px;
-  }
-}
-
-/* @media only screen and (max-width: 600px) { */
-
+/* Header Styles */
 section.PrimaryHeader {
   display: flex;
   position: sticky;
   top: 0;
+  z-index: 50;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 80px;
   background-color: rgb(236, 236, 236);
   font-size: 15px;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
 }
 
 .toggleButton {
@@ -121,11 +49,7 @@ section.PrimaryHeader {
   margin-top: 5px;
 }
 
-.logo {
-  width: 180px;
-  height: 180px;
-}
-
+/* Hero Section Styles */
 .heroSection {
   display: flex;
   flex-direction: column;
@@ -133,7 +57,6 @@ section.PrimaryHeader {
   width: 100%;
   height: 100vh;
   background-color: rgb(16, 13, 43);
-  margin: 0 200px;
 }
 
 .heroSection > * {
@@ -151,22 +74,28 @@ section.PrimaryHeader {
   font-weight: bolder;
 }
 
+/* Services Section Styles */
 .services {
-  padding: 0 10px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0 10px;
 }
 
 .cards {
   gap: 10px;
 }
 
-.founder {
+.serviceCards {
   width: 100%;
-  height: fit-content;
+}
+
+/* Feature Section Styles */
+.FeatureSection {
+  background-color: rgb(16, 16, 43);
+  padding: 20px;
 }
 
 .Features {
@@ -174,12 +103,18 @@ section.PrimaryHeader {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: start;
+  align-items: flex-start;
   width: 100%;
   height: 60vh;
   padding: 20px 0;
 }
 
+.FeatureImage {
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Awards Section Styles */
 .Awards {
   display: flex;
   justify-content: space-around;
@@ -191,11 +126,15 @@ section.PrimaryHeader {
   width: 150px;
   height: 150px;
 }
-.FeatureImage {
-  padding: 5px 10px;
-  border-radius: 20px;
+
+.awardsContainer {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
 }
 
+/* Team Section Styles */
 .teamText {
   padding: 10px;
   display: flex;
@@ -206,16 +145,125 @@ section.PrimaryHeader {
   height: 25vh;
   background-color: white;
 }
-.emailButtom {
+
+/* Founder Section Styles */
+.founder {
+  width: 100%;
+  height: fit-content;
+}
+
+/* Buttons */
+.PrimaryButton {
+  width: auto;
+  color: antiquewhite;
+  font-weight: bolder;
+  border-radius: 40px;
+  transition: all 0.1s ease-in;
+  padding: 10px 10px;
+  min-width: 150px;
+}
+
+.PrimaryButton:hover {
+  background-color: #e7107e;
+}
+
+.emailButton {
   display: flex;
   justify-content: center;
 }
 
-/* service page */
-
+/* Client Logo */
 .clientLogo {
   width: 120px;
   height: auto;
 }
 
-/* ///////////////////////////////////// tech animation////////////////////////// */
+/* Navigation Hover Effects */
+.sbmenuItem:hover .subMenuText {
+  color: white !important;
+}
+
+/* Responsive Styles for Tablets and Desktop */
+@media only screen and (min-width: 768px) {
+  .services {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 12%;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 32%;
+  }
+
+  .awardsImgSection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  .awardsContainer {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Tablet-Specific Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.PrimaryHeader {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 160px;
+    background-color: rgb(236, 236, 236);
+    font-size: 30px;
+  }
+  .logo {
+    width: 500px;
+    height: 500px;
+  }
+
+  .awardsImgSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .clientLogo {
+    width: 300px;
+  }
+
+  .awardsContainer {
+    width: 200px;
+  }
+
+  .awardsContainer > :nth-child(1) {
+    width: 150px;
+    height: 150px;
+  }
+
+  .serviceCards {
+    width: 48%;
+    height: 450px;
+  }
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  .FeatureSection {
+    padding: 0 30px;
+  }
+
+  .Features {
+    margin-bottom: 100px;
+  }
+}
