@@ -46,6 +46,7 @@ export default function Header(props) {
     {name: 'Home', href: '/'},
     // {name: 'Services', href: '/services'},
     {name: 'Pricing', href: '/pricing'},
+    {name: 'Projects', href: '/project'},
     {name: 'About', href: '/about'},
     {name: 'Careers', href: '/career'},
     {name: 'Tech', href: '/tech'},

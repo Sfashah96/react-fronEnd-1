@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "firebase": "^11.4.0",
+    "framer-motion": "^12.6.2",
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.479.0",
     "outline": "^0.1.1",

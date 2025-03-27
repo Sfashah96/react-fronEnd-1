@@ -9,6 +9,7 @@ import BlogPage from './Components/BlogPage/src/BlogPage';
 import CareersPage from './Components/CareerPage/Career';
 import TechPage from './Components/TechPage/TechPage';
 import DashBoard from './Components/DashBorad/DashBoard';
+import Projects from './pages/Project';
 function App() {
   return (
     <Router basename="/">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<CareersPage />} />
           <Route path="/tech" element={<TechPage />} />
+          <Route path="/project" element={<Projects />} />
           {/* <Route path="/blog/*" element={<BlogPage />} /> Use `/*` for nested routes */}
           <Route path="/dashboard" element={<DashBoard />} />
         </Routes>

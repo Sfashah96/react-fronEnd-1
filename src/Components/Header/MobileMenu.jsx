@@ -65,7 +65,7 @@ const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
             focus:outline-none focus:ring-2 focus:ring-pink-500"
           aria-label="Close menu"
         >
-          <span className="text-20 text-white ">×</span>
+          <span className="text-20 text-black ">×</span>
         </button>
         {/* Menu links */}
         <nav className="flex flex-col gap-2 mt-8">
